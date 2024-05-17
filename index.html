@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NASNEAKERSSSSS</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="login.html">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="products">
+            <div class="product">
+                <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/2e75ba9a-19b9-49d6-bffb-35e414b92954/kobe-8-protro-venice-beach-fq3548-001-release-date.jpg" alt="Product 1">
+                <h2>Kobe 8 "Venice Beach"</h2>
+                <p>9895</p>
+                <button onclick="addToCart('Kobe 8 Venice Beach', 9895.00)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/exjirvz4fit9gq5p22k1/nike-kobe-6-black-mamba-release-date.jpg" alt="Product 2">
+                <h2>Kobe 6 "Black Mamba"</h2>
+                <p>9895</p>
+                <button onclick="addToCart('Kobe 6 Black Mamba ', 9895.00)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/wwaeglebljfzredg8fym/nike-kobe-11-elite-low-4kb-liquid-lime.jpg" alt="Product 3">
+                <h2>Kobe 11 "Liquid Lime"</h2>
+                <p>9895</p>
+                <button onclick="addToCart('Kobe 11 Liquid Lime', 9895.00)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/35b998bf-b75e-452a-91bc-97b9b685277b/kobe-4-protro-mambacita-fj9363-100-release-date.jpg" alt="Product 3">
+                <h2>Kobe 4 "GiGi"</h2>
+                <p>$9895</p>
+                <button onclick="addToCart('Kobe 4 GiGi', 9895.00)">Add to Cart</button>
+            </div>
+            <!-- Add more product entries as needed -->
+        </section>
+
+        <!-- Cart -->
+    <div class="cart" id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="buy-btn">Buy</button>
+        <!-- Add a div to hold the receipt -->
+        <div id="receipt-container" class="receipt-container" style="display: none;">
+            <div class="receipt">
+                <button id="close-receipt-btn" onclick="closeReceipt()">X</button> <!-- Close button -->
+                <h2>Receipt</h2>
+                <ul id="receipt-items" class="receipt-items">
+                    <!-- Receipt items will be dynamically added here -->
+                </ul>
+                <p>Total: $<span id="total-receipt">0.00</span></p>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-commerce Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
